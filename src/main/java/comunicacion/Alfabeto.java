@@ -26,10 +26,10 @@ public class Alfabeto extends Pictograma{
 	@Override
 	public String toString() {
 		String linea = "";
-		for (String letra : letras) {
-			linea += letra + ", ";
+		for (int i = 0; i>(letras.length-1);i++) {
+			linea += letras[i] + ", ";
 		}
-		return linea;
+		return linea+letras[letras.length];
 	}
 
 	public String getInterpretacion() {
