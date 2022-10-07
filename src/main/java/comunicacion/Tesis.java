@@ -1,10 +1,8 @@
 package comunicacion;
 
-import java.util.ArrayList;
-
 public class Tesis extends Escrito {
 	private String idea;
-	private static ArrayList<String> argumentos;
+	private String[] argumentos;
 	private String conclusion;
 	private String referencias;
 	private String interpretacion;
@@ -40,7 +38,7 @@ public class Tesis extends Escrito {
 				+super.getAutor()+"\n"
 				+super.getPaginas()+"\n"
 				+this.idea+"\n"
-				+argumentos.size()+"\n"
+				+this.argumentos.length+"\n"
 				+this.conclusion+"\n"
 				+this.referencias+"\n"
 				+this.interpretacion;
@@ -78,12 +76,12 @@ public class Tesis extends Escrito {
 		this.interpretacion = interpretacion;
 	}
 
-	public static ArrayList<String> getArgumentos() {
+	public String[] getArgumentos() {
 		return argumentos;
 	}
 
-	public static void setArgumentos(ArrayList<String> argumentos) {
-		Tesis.argumentos = argumentos;
+	public void setArgumentos(String[] argumentos) {
+		this.argumentos = argumentos;
 	}
 	
 }
