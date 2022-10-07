@@ -16,7 +16,8 @@ public class Alfabeto extends Pictograma{
 	}
 
 	public static int cantidadLetras() {
-		letras.size();}
+		return letras.size();
+		}
 
 	@Override
 	public String interpretacion() {
