@@ -30,8 +30,7 @@ public class Fabula extends Escrito {
 			+super.getTitulo()+"\n"
 			+super.getAutor()+"\n"
 			+super.getPaginas()+"\n"
-			+this.ensenanza+"\n"
-			+this.interpretacion;
+			+this.ensenanza;
 	}
 
 	public String getEnsenanza() {

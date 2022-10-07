@@ -34,8 +34,7 @@ public class Periodico extends Escrito{
 				+super.getAutor()+"\n"
 				+super.getPaginas()+"\n"
 				+this.fecha+"\n"
-				+this.primicia+"\n"
-				+this.interpretacion;
+				+this.primicia;
 	}
 
 	public String getFecha() {
