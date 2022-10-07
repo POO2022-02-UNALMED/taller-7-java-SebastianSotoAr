@@ -18,8 +18,8 @@ public class Periodico extends Escrito{
 	}
 
 	@Override
-	public int palabrasTotales(int nose) {
-		return super.getPaginas()*10;
+	public int palabrasTotales(int num) {
+		return num*10;
 	}
 
 	@Override

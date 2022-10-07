@@ -22,13 +22,12 @@ public class Tesis extends Escrito {
 	}
 
 	@Override
-	public int palabrasTotales(int nose) {
-		return super.getPaginas()*5;
+	public int palabrasTotales(int num) {
+		return num*5;
 	}
 
 	@Override
 	public String interpretacion() {
-		// TODO Auto-generated method stub
 		return this.interpretacion;
 	}
 

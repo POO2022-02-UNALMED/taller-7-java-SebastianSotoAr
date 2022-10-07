@@ -20,8 +20,8 @@ public class Libro extends Escrito{
 	}
 
 	@Override
-	public int palabrasTotales(int nose) {
-		return super.getPaginas()*2;
+	public int palabrasTotales(int num) {
+		return num*2;
 	}
 
 	@Override
