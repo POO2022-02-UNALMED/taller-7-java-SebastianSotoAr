@@ -16,7 +16,7 @@ public class Fabula extends Escrito {
 
 	@Override
 	public int palabrasTotales(int num) {
-		return num*1;
+		return super.getPaginas()*num*1;
 	}
 
 	@Override
