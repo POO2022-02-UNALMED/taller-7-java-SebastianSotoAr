@@ -1,10 +1,12 @@
-package java;
+package comunicacion;
 
 public class Fabula extends Escrito {
-	String ensenanza;
-	String interpretacion;
+	private String ensenanza;
+	private String interpretacion;
 	
-	public Fabula() {}
+	public Fabula(String origen, String titulo, String autor, int paginas) {
+		super(origen, titulo, autor, paginas);
+	}
 
 	public Fabula(String origen, String titulo, String autor, int paginas, String ensenanza, String interpretacion) {
 		super(origen, titulo, autor, paginas);
@@ -13,21 +15,23 @@ public class Fabula extends Escrito {
 	}
 
 	@Override
-	int palabrasTotales(int nose) {
-		// TODO Auto-generated method stub
-		return super.palabrasTotales(nose);
+	public int palabrasTotales(int nose) {
+		return super.getPaginas()*1;
 	}
 
 	@Override
-	String interpretacion() {
-		// TODO Auto-generated method stub
-		return super.interpretacion();
+	public String interpretacion() {
+		return this.interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return super.getOrigen()+"\n"
+			+super.getTitulo()+"\n"
+			+super.getAutor()+"\n"
+			+super.getPaginas()+"\n"
+			+this.ensenanza+"\n"
+			+this.interpretacion;
 	}
 
 	public String getEnsenanza() {

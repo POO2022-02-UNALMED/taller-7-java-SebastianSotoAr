@@ -1,34 +1,39 @@
-package java;
+package comunicacion;
 
 import java.util.ArrayList;
 
 public class Alfabeto extends Pictograma{
-	static ArrayList<String> letras;
-	String interpretacion;
+	private static ArrayList<String> letras;
+	private String interpretacion;
 	
-	public Alfabeto() {}
+	public Alfabeto(String origen) {
+		super(origen);
+	}
 
 	public Alfabeto(String origen, String interpretacion) {
 		super(origen);
 		this.interpretacion = interpretacion;
 	}
 
-	int cantidadLetras() {return 1060;}
+	public static int cantidadLetras() {
+		letras.size();}
 
 	@Override
-	String interpretacion() {
-		// TODO Auto-generated method stub
-		return super.interpretacion();
+	public String interpretacion() {
+		return this.interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		String linea = "";
+		for (String letra : letras) {
+			linea += letra + ", ";
+		}
+		return linea;
 	}
 
 	public String getInterpretacion() {
-		return interpretacion;
+		return this.interpretacion;
 	}
 
 	public void setInterpretacion(String interpretacion) {

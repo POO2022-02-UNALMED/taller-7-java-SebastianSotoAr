@@ -1,11 +1,13 @@
-package java;
+package comunicacion;
 
 public class Periodico extends Escrito{
-	String fecha;
-	String primicia;
-	String interpretacion;
+	private String fecha;
+	private String primicia;
+	private String interpretacion;
 	
-	public Periodico() {}
+	public Periodico(String origen, String titulo, String autor, int paginas) {
+		super(origen, titulo, autor, paginas);
+	}
 
 	public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia,
 			String interpretacion) {
@@ -16,20 +18,24 @@ public class Periodico extends Escrito{
 	}
 
 	@Override
-	int palabrasTotales(int nose) {
-		// TODO Auto-generated method stub
-		return super.palabrasTotales(nose);
+	public int palabrasTotales(int nose) {
+		return super.getPaginas()*10;
 	}
 
 	@Override
-	String interpretacion() {
-		return this.interpretacion();
+	public String interpretacion() {
+		return this.interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return super.getOrigen()+"\n"
+				+super.getTitulo()+"\n"
+				+super.getAutor()+"\n"
+				+super.getPaginas()+"\n"
+				+this.fecha+"\n"
+				+this.primicia+"\n"
+				+this.interpretacion;
 	}
 
 	public String getFecha() {

@@ -1,15 +1,17 @@
-package java;
+package comunicacion;
 
 import java.util.ArrayList;
 
 public class Tesis extends Escrito {
-	String idea;
-	static ArrayList<String> argumentos;
-	String conclusion;
-	String referencias;
-	String interpretacion;
-
-	public Tesis() {}
+	private String idea;
+	private static ArrayList<String> argumentos;
+	private String conclusion;
+	private String referencias;
+	private String interpretacion;
+	
+	public Tesis(String origen, String titulo, String autor, int paginas) {
+		super(origen, titulo, autor, paginas);
+	}
 
 	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String conclusion,
 			String referencias, String interpretacion) {
@@ -21,21 +23,27 @@ public class Tesis extends Escrito {
 	}
 
 	@Override
-	int palabrasTotales(int nose) {
-		// TODO Auto-generated method stub
-		return super.palabrasTotales(nose);
+	public int palabrasTotales(int nose) {
+		return super.getPaginas()*5;
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		// TODO Auto-generated method stub
-		return super.interpretacion();
+		return this.interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return super.getOrigen()+"\n"
+				+super.getTitulo()+"\n"
+				+super.getAutor()+"\n"
+				+super.getPaginas()+"\n"
+				+this.idea+"\n"
+				+argumentos.size()+"\n"
+				+this.conclusion+"\n"
+				+this.referencias+"\n"
+				+this.interpretacion;
 	}
 
 	public String getIdea() {

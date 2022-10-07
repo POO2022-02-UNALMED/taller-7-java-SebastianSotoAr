@@ -1,12 +1,14 @@
-package java;
+package comunicacion;
 
 public class Libro extends Escrito{
-	String co_autor;
-	String editorial;
-	String edicion;
-	String interpretacion;
+	private String co_autor;
+	private String editorial;
+	private String edicion;
+	private String interpretacion;
 	
-	public Libro() {}
+	public Libro(String origen, String titulo, String autor, int paginas) {
+		super(origen, titulo, autor, paginas);
+	}
 
 	public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial,
 			String edicion, String interpretacion) {
@@ -18,21 +20,26 @@ public class Libro extends Escrito{
 	}
 
 	@Override
-	int palabrasTotales(int nose) {
-		// TODO Auto-generated method stub
-		return super.palabrasTotales(nose);
+	public int palabrasTotales(int nose) {
+		return super.getPaginas()*2;
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		// TODO Auto-generated method stub
-		return super.interpretacion();
+		return this.interpretacion;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return super.getOrigen()+"\n"
+				+super.getTitulo()+"\n"
+				+super.getAutor()+"\n"
+				+super.getPaginas()+"\n"
+				+this.co_autor+"\n"
+				+this.editorial+"\n"
+				+this.edicion+"\n"
+				+this.interpretacion;
 	}
 
 	public String getCo_autor() {
